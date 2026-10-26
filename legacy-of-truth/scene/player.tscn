@@ -54,7 +54,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_hqtel")
 }],
 "loop": 1,
-"name": &"idle",
+"name": &"idle_left",
 "speed": 10.0
 }, {
 "frames": [{
@@ -84,9 +84,9 @@ script = ExtResource("1_xo3ru")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=38698119]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_3owqy")
-animation = &"idle_right"
+animation = &"idle_left"
 autoplay = "idle_right"
-frame_progress = 0.7833962
+frame_progress = 0.6389085
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740917695]
 position = Vector2(0, -10)
