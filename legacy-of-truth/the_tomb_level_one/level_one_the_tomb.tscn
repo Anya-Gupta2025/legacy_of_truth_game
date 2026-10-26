@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdvxx0yson4qf"]
+
+[ext_resource type="Texture2D" uid="uid://cgqhkswfg3pvh" path="res://the_tomb_level_one/the_tomb_bg.png" id="1_mt2kb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
+texture = ExtResource("1_mt2kb")
+
+[node name="LevelOneTheTomb" type="Node2D" unique_id=800105452]
+
+[node name="Panel" type="Panel" parent="." unique_id=1997158470]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yb5dr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621228886]
+position = Vector2(144, 198)
+zoom = Vector2(4, 4)
