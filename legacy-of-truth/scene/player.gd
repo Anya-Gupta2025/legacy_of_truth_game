@@ -27,14 +27,14 @@ func _physics_process(delta: float) -> void:
 			sprite.flip_h = true
 		
 		#Play run animation
-		sprite.play("run")
+		sprite.play("idle_right")
 	
 	else:
 	#Stop moving
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 #Play idle animation
-		sprite.play("idle")
+		sprite.play("idle_left")
 	
 	move_and_slide()
 		
