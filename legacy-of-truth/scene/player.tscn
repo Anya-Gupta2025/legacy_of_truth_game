@@ -3,23 +3,20 @@
 [ext_resource type="Script" uid="uid://csskhew28eroj" path="res://scene/player.gd" id="1_xo3ru"]
 [ext_resource type="Texture2D" uid="uid://blbyr631ap0wp" path="res://scene/players.png" id="2_hjaqi"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sh265"]
-load_path = "res://.godot/imported/players.png-c8359272c6cbe5651e1bafe53c74becc.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4flbx"]
-atlas = SubResource("CompressedTexture2D_sh265")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjaqi"]
+atlas = ExtResource("2_hjaqi")
 region = Rect2(0, 0, 27, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
-atlas = SubResource("CompressedTexture2D_sh265")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp4bs"]
+atlas = ExtResource("2_hjaqi")
 region = Rect2(27, 0, 27, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = SubResource("CompressedTexture2D_sh265")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2vtq"]
+atlas = ExtResource("2_hjaqi")
 region = Rect2(54, 0, 27, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = SubResource("CompressedTexture2D_sh265")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fvbb"]
+atlas = ExtResource("2_hjaqi")
 region = Rect2(81, 0, 27, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvtld"]
@@ -42,16 +39,16 @@ region = Rect2(81, 32, 27, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4flbx")
+"texture": SubResource("AtlasTexture_hjaqi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_onrkg")
+"texture": SubResource("AtlasTexture_hp4bs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i3pqv")
+"texture": SubResource("AtlasTexture_g2vtq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqtel")
+"texture": SubResource("AtlasTexture_2fvbb")
 }],
 "loop": 1,
 "name": &"idle_left",
@@ -86,7 +83,6 @@ position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_3owqy")
 animation = &"idle_left"
 autoplay = "idle_right"
-frame_progress = 0.6389085
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740917695]
 position = Vector2(0, -10)
