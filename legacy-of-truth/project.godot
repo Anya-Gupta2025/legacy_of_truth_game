@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Legacy Of Truth"
-run/main_scene="uid://c4was25jmfp5u"
+run/main_scene="uid://bxn2cbrbox0cl"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
