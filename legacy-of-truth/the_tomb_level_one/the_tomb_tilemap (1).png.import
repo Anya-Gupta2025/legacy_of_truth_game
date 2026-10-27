@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2rnpelefjyip"
-path="res://.godot/imported/the_tomb_tilemap.png-0b66e625d17ceb1f160209f40b5da711.ctex"
+uid="uid://ykoa4qppmu0k"
+path="res://.godot/imported/the_tomb_tilemap (1).png-bd4c200fdac241c6c4a8172d4936cc8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://the_tomb_level_one/the_tomb_tilemap.png"
-dest_files=["res://.godot/imported/the_tomb_tilemap.png-0b66e625d17ceb1f160209f40b5da711.ctex"]
+source_file="res://the_tomb_level_one/the_tomb_tilemap (1).png"
+dest_files=["res://.godot/imported/the_tomb_tilemap (1).png-bd4c200fdac241c6c4a8172d4936cc8a.ctex"]
 
 [params]
 

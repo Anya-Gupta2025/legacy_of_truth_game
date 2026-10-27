@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdvxx0yson4qf"]
 
 [ext_resource type="Texture2D" uid="uid://cgqhkswfg3pvh" path="res://the_tomb_level_one/the_tomb_bg.png" id="1_mt2kb"]
-[ext_resource type="Texture2D" uid="uid://d2rnpelefjyip" path="res://the_tomb_level_one/the_tomb_tilemap.png" id="2_851cf"]
+[ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="2_851cf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
 texture = ExtResource("1_mt2kb")
@@ -12,37 +12,52 @@ texture = ExtResource("2_851cf")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
 6:0/0 = 0
+7:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
 6:1/0 = 0
+7:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
 3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
 6:2/0 = 0
+7:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
 6:3/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_j5kf0"]
+[sub_resource type="TileSet" id="TileSet_sublu"]
 sources/0 = SubResource("TileSetAtlasSource_wk5gg")
 
 [node name="LevelOneTheTomb" type="Node2D" unique_id=800105452]
@@ -56,6 +71,6 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_yb5dr")
 position = Vector2(144, 198)
 zoom = Vector2(4, 4)
 
-[node name="TileMap" type="TileMap" parent="." unique_id=740138935]
-tile_set = SubResource("TileSet_j5kf0")
+[node name="TileMap" type="TileMap" parent="." unique_id=1687591410]
+tile_set = SubResource("TileSet_sublu")
 format = 2
