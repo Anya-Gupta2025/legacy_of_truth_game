@@ -72,7 +72,7 @@ offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yb5dr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1621228886]
-position = Vector2(144, 198)
+position = Vector2(188, 198)
 zoom = Vector2(4, 4)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1336889470]
