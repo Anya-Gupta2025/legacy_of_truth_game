@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cgqhkswfg3pvh" path="res://the_tomb_level_one/the_tomb_bg.png" id="1_mt2kb"]
 [ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="2_851cf"]
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="3_wk5gg"]
+[ext_resource type="PackedScene" uid="uid://bnscin5m72c85" path="res://scene/coin.tscn" id="4_6c0qg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
 texture = ExtResource("1_mt2kb")
@@ -82,3 +83,18 @@ position = Vector2(95, 187)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1621228886]
 position = Vector2(-4, -13)
 zoom = Vector2(4, 4)
+
+[node name="Coin5" parent="." unique_id=310476534 instance=ExtResource("4_6c0qg")]
+position = Vector2(281, 167)
+
+[node name="Coin4" parent="." unique_id=640056838 instance=ExtResource("4_6c0qg")]
+position = Vector2(233, 189)
+
+[node name="Coin3" parent="." unique_id=1396260365 instance=ExtResource("4_6c0qg")]
+position = Vector2(161, 175)
+
+[node name="Coin2" parent="." unique_id=1851771010 instance=ExtResource("4_6c0qg")]
+position = Vector2(189, 188)
+
+[node name="Coin" parent="." unique_id=169057689 instance=ExtResource("4_6c0qg")]
+position = Vector2(132, 185)
