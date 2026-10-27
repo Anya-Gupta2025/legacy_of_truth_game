@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4was25jmfp5u"]
 
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="1_5kiuu"]
+[ext_resource type="PackedScene" uid="uid://cdvxx0yson4qf" path="res://the_tomb_level_one/level_one_the_tomb.tscn" id="2_dbls1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3owqy"]
 
@@ -14,3 +15,5 @@ position = Vector2(50, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1939051249]
 shape = SubResource("WorldBoundaryShape2D_3owqy")
+
+[node name="LevelOneTheTomb" parent="." unique_id=800105452 instance=ExtResource("2_dbls1")]
