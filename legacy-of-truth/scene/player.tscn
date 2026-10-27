@@ -85,5 +85,6 @@ animation = &"idle_left"
 autoplay = "idle_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740917695]
-position = Vector2(0, -10)
+position = Vector2(0, -10.000001)
+scale = Vector2(1, 1.8399997)
 shape = SubResource("CircleShape2D_3owqy")

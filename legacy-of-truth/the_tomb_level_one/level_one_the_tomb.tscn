@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgqhkswfg3pvh" path="res://the_tomb_level_one/the_tomb_bg.png" id="1_mt2kb"]
 [ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="2_851cf"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="3_wk5gg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
 texture = ExtResource("1_mt2kb")
@@ -71,10 +72,13 @@ offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_yb5dr")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1621228886]
-position = Vector2(188, 198)
-zoom = Vector2(4, 4)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1336889470]
 tile_map_data = PackedByteArray("AAAFAAwAAAAAAAAAAAAGAAwAAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAJAAwAAAABAAAAAAAKAAwAAAABAAAAAAALAAwAAAABAAAAAAAMAAwAAAACAAAAAAAFAA0AAAAAAAEAAAAMAA0AAAACAAEAAAAMAA4AAAACAAIAAAAFAA4AAAAAAAIAAAAGAA4AAAABAAIAAAAHAA4AAAABAAIAAAAIAA4AAAABAAIAAAAJAA4AAAABAAIAAAAKAA4AAAABAAIAAAALAA4AAAABAAIAAAAGAA0AAAABAAEAAAAHAA0AAAABAAEAAAAIAA0AAAABAAEAAAAJAA0AAAABAAEAAAAKAA0AAAABAAEAAAALAA0AAAABAAEAAAAOAAwAAAADAAAAAAAOAA0AAAADAAEAAAAOAA4AAAADAAIAAAAQAAwAAAAEAAAAAAAQAA0AAAAEAAEAAAAQAA4AAAAEAAIAAAARAAwAAAAFAAAAAAARAA0AAAAFAAEAAAARAA4AAAAFAAIAAAASAAwAAAAGAAAAAAASAA0AAAAGAAEAAAASAA4AAAAGAAIAAAA=")
 tile_set = SubResource("TileSet_yb5dr")
+
+[node name="Player" parent="." unique_id=26407888 instance=ExtResource("3_wk5gg")]
+position = Vector2(95, 187)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1621228886]
+position = Vector2(-4, -13)
+zoom = Vector2(4, 4)
