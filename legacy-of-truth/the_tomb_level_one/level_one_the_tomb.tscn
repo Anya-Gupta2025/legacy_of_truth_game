@@ -1,8 +1,11 @@
 [gd_scene format=4 uid="uid://cdvxx0yson4qf"]
 
+[ext_resource type="Script" uid="uid://c1stu4wgxvb54" path="res://the_tomb_level_one/level_one_the_tomb.gd" id="1_jje72"]
 [ext_resource type="Texture2D" uid="uid://cgqhkswfg3pvh" path="res://the_tomb_level_one/the_tomb_bg.png" id="1_mt2kb"]
 [ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="2_851cf"]
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="3_wk5gg"]
+[ext_resource type="Texture2D" uid="uid://cwej2yqgednei" path="res://the_tomb_puzzle/images/Portal.png" id="4_e01xr"]
+[ext_resource type="Texture2D" uid="uid://c7icr4vecpdlb" path="res://the_tomb_puzzle/images/Portal-3.png.png" id="5_jje72"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
 texture = ExtResource("1_mt2kb")
@@ -65,7 +68,30 @@ texture = ExtResource("2_851cf")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_851cf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n376a"]
+atlas = ExtResource("4_e01xr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj8rr"]
+atlas = ExtResource("4_e01xr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sublu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n376a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj8rr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="LevelOneTheTomb" type="Node2D" unique_id=800105452]
+script = ExtResource("1_jje72")
 
 [node name="Panel" type="Panel" parent="." unique_id=1997158470]
 offset_right = 1152.0
@@ -82,3 +108,19 @@ position = Vector2(95, 187)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1621228886]
 position = Vector2(-4, -13)
 zoom = Vector2(4, 4)
+
+[node name="puzzle_portal_animation" type="AnimatedSprite2D" parent="." unique_id=1033916156]
+position = Vector2(183, 172)
+sprite_frames = SubResource("SpriteFrames_sublu")
+autoplay = "default"
+frame_progress = 0.7089519
+
+[node name="puzzle_portal" type="TextureButton" parent="puzzle_portal_animation" unique_id=1260312418]
+offset_left = -32.0
+offset_top = -31.0
+offset_right = 32.0
+offset_bottom = 33.0
+scale = Vector2(0.9926447, 0.987104)
+texture_hover = ExtResource("5_jje72")
+
+[connection signal="pressed" from="puzzle_portal_animation/puzzle_portal" to="." method="_on_puzzle_portal_pressed"]
