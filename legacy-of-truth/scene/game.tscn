@@ -9,9 +9,6 @@
 [node name="Player" parent="." unique_id=26407888 instance=ExtResource("1_5kiuu")]
 position = Vector2(49, -63)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1419994659]
-ignore_rotation = false
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1424179180]
 position = Vector2(50, -56)
 
