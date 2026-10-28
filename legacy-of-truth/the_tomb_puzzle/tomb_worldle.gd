@@ -25,17 +25,18 @@ func _input(event):
 			print("Letter: ", letter)
 			
 			# Only update until entire row is filled.
-			if not row_filled:
+			if not row_filled and index < buttons.size():
 				buttons[index].text = letter
 				index += 1
-				
-				if index != 0 and index % 8 == 0:
+
+				if index > 0 and index % SIZE == 0:
 					row_filled = true
 			
 	if Input.is_action_pressed("back"):
-		if index > 0 and index > latest_row_index:
+		if index > latest_row_index:
 			index -= 1
 			buttons[index].text = ""
+			row_filled = false
 			
 	if Input.is_action_pressed("enter"):
 		# Only check win if the entire word ahs been types out
@@ -97,13 +98,20 @@ func check_win():
 	if entered_text == puzzle_word:
 		result_layer.show()
 		label.text = "You suceeded!"
+		continue_button.show()
 		lose_button.hide()
 		lose_label.hide()
 		
 	# Check lose condition when all attempts are up
-	if index == buttons.size():
+	elif index == buttons.size():
 		result_layer.show()
 		label.text = "You couldn't suceed!"
 		continue_button.hide()
+		lose_button.show()
+		lose_label.show()
 		
-		
+func _on_continue_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://the_tomb_puzzle/tomb_puzzle_six.tscn")
+
+func _on_lose_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://the_tomb_level_one/level_one_the_tomb.tscn")

@@ -20,15 +20,23 @@ position = Vector2(582, 323)
 zoom = Vector2(0.33, 0.33)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=456755001]
-position = Vector2(578, 328.5)
-scale = Vector2(0.6010417, 0.6064815)
+position = Vector2(562, 317.99988)
+scale = Vector2(1.8531251, 1.8666666)
 texture = ExtResource("1_7300d")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1874137011]
-offset_left = 327.0
-offset_top = 250.0
-offset_right = 877.0
-offset_bottom = 450.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 39.0
+offset_right = 424.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.697583, 2.697583)
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 8
@@ -262,9 +270,9 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.31294692, 0.078790836, 0.038262814, 1)
 theme_override_fonts/font = ExtResource("2_kqsty")
 theme_override_font_sizes/font_size = 25
-text = "You lost! Try level again to get sword
-piece, or skip this puzzle and walk 
-over it when you return to level."
+text = "You lost! Try level again to get the
+sword piece, or skip this puzzle and
+walk over it when you return to level."
 horizontal_alignment = 1
 
 [node name="continue_button" type="Button" parent="result_layer" unique_id=1098180508]
@@ -290,3 +298,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_sublu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sublu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sublu")
 text = "CONTINUE"
+
+[connection signal="pressed" from="result_layer/continue_button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="result_layer/lose_button" to="." method="_on_lose_button_pressed"]

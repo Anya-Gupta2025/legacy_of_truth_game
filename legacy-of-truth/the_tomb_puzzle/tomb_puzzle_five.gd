@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_continue_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://the_tomb_puzzle/tomb_worldle.tscn")
