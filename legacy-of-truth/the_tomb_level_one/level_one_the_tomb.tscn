@@ -5,9 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="2_851cf"]
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="3_wk5gg"]
 [ext_resource type="PackedScene" uid="uid://bnscin5m72c85" path="res://scene/coin.tscn" id="4_6c0qg"]
-[ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="5_e01xr"]
-[ext_resource type="Script" uid="uid://b04al45uoe27h" path="res://the_tomb_level_one/game_manager.gd" id="5_jje72"]
 [ext_resource type="Texture2D" uid="uid://cwej2yqgednei" path="res://the_tomb_puzzle/images/Portal.png" id="4_e01xr"]
+[ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="5_e01xr"]
 [ext_resource type="Texture2D" uid="uid://c7icr4vecpdlb" path="res://the_tomb_puzzle/images/Portal-3.png.png" id="5_jje72"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
@@ -128,11 +127,11 @@ position = Vector2(189, 188)
 position = Vector2(132, 185)
 
 [node name="Game Manager" type="Node" parent="." unique_id=1883476167]
-script = ExtResource("5_jje72")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=579876430]
 
 [node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("5_e01xr")]
+
 [node name="puzzle_portal_animation" type="AnimatedSprite2D" parent="." unique_id=1033916156]
 position = Vector2(183, 172)
 sprite_frames = SubResource("SpriteFrames_sublu")
