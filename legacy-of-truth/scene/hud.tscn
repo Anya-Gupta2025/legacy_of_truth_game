@@ -18,20 +18,20 @@ grow_vertical = 2
 script = ExtResource("1_pvgpj")
 
 [node name="CoinTexture" type="TextureRect" parent="." unique_id=1055047519]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+offset_right = 131.0
+offset_bottom = 129.0
 texture = SubResource("AtlasTexture_3owqy")
 
 [node name="ScoreLab" type="Label" parent="CoinTexture" unique_id=850827877]
 layout_mode = 0
-offset_left = -13.0
-offset_top = 3.0
-offset_right = 55.0
-offset_bottom = 43.0
+offset_left = 18.0
+offset_top = 43.0
+offset_right = 122.0
+offset_bottom = 103.0
 theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("3_ry2h7")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 30
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
