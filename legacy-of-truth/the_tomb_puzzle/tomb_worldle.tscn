@@ -1,0 +1,303 @@
+[gd_scene format=3 uid="uid://dk2fep4anw16b"]
+
+[ext_resource type="Texture2D" uid="uid://pvaafsk11jlu" path="res://the_tomb_puzzle/images/wordle_adaptation_bg.png" id="1_7300d"]
+[ext_resource type="Script" uid="uid://d38t7r00vg85p" path="res://the_tomb_puzzle/tomb_worldle.gd" id="1_kqsty"]
+[ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_kqsty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sublu"]
+bg_color = Color(0.5976877, 0.29977557, 0.16795558, 1)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+shadow_size = 8
+
+[node name="TombWorldle" type="Node2D" unique_id=437582931]
+script = ExtResource("1_kqsty")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1995170476]
+position = Vector2(582, 323)
+zoom = Vector2(0.33, 0.33)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=456755001]
+position = Vector2(562, 317.99988)
+scale = Vector2(1.8531251, 1.8666666)
+texture = ExtResource("1_7300d")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1874137011]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = 39.0
+offset_right = 424.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.697583, 2.697583)
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 8
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=1001243147]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=1095854237]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=1382293128]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1068574489]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=1051130113]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=1896464485]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=494814278]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=1182412213]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1516284808]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button10" type="Button" parent="GridContainer" unique_id=682644059]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button11" type="Button" parent="GridContainer" unique_id=1572106963]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button12" type="Button" parent="GridContainer" unique_id=1857733015]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button13" type="Button" parent="GridContainer" unique_id=990897364]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button14" type="Button" parent="GridContainer" unique_id=1445628000]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button15" type="Button" parent="GridContainer" unique_id=1737936029]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button16" type="Button" parent="GridContainer" unique_id=1311068438]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button17" type="Button" parent="GridContainer" unique_id=840341017]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button18" type="Button" parent="GridContainer" unique_id=1046920719]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button19" type="Button" parent="GridContainer" unique_id=131731168]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button20" type="Button" parent="GridContainer" unique_id=1741145338]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button21" type="Button" parent="GridContainer" unique_id=26074798]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button22" type="Button" parent="GridContainer" unique_id=1701530380]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button23" type="Button" parent="GridContainer" unique_id=111939778]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="Button24" type="Button" parent="GridContainer" unique_id=1350154627]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "x"
+
+[node name="result_layer" type="CanvasLayer" parent="." unique_id=1021308384]
+
+[node name="ColorRect" type="ColorRect" parent="result_layer" unique_id=1077801502]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.92941177, 0.77254903, 0.6039216, 0.827451)
+
+[node name="result_label" type="Label" parent="result_layer" unique_id=1216599057]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -475.0
+offset_top = 55.0
+offset_right = 475.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.31294692, 0.078790836, 0.038262814, 1)
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 35
+text = "You have succeeded!"
+horizontal_alignment = 1
+
+[node name="lose_label" type="Label" parent="result_layer" unique_id=1801478168]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -585.0
+offset_top = 296.0
+offset_right = 585.0
+offset_bottom = 611.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.31294692, 0.078790836, 0.038262814, 1)
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 25
+text = "You lost! Try level again to get the
+sword piece, or skip this puzzle and
+walk over it when you return to level."
+horizontal_alignment = 1
+
+[node name="continue_button" type="Button" parent="result_layer" unique_id=1098180508]
+offset_left = 448.0
+offset_top = 481.0
+offset_right = 724.0
+offset_bottom = 545.0
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_sublu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sublu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sublu")
+text = "CONTINUE"
+
+[node name="lose_button" type="Button" parent="result_layer" unique_id=948144676]
+offset_left = 448.0
+offset_top = 481.0
+offset_right = 724.0
+offset_bottom = 545.0
+theme_override_fonts/font = ExtResource("2_kqsty")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_sublu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sublu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sublu")
+text = "CONTINUE"
+
+[connection signal="pressed" from="result_layer/continue_button" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="result_layer/lose_button" to="." method="_on_lose_button_pressed"]
