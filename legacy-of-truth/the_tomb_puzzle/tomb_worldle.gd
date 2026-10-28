@@ -102,7 +102,8 @@ func check_win():
 		
 	# Check lose condition when all attempts are up
 	if index == buttons.size():
-		label.text = '''You lost! Try level again to get sword piece, or skip this puzzle and walk over it when you return to level.'''
+		result_layer.show()
+		label.text = "You couldn't suceed!"
 		continue_button.hide()
 		
 		

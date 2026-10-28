@@ -246,8 +246,9 @@ offset_bottom = 112.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.31294692, 0.078790836, 0.038262814, 1)
 theme_override_fonts/font = ExtResource("2_kqsty")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 35
 text = "You have succeeded!"
+horizontal_alignment = 1
 
 [node name="lose_label" type="Label" parent="result_layer" unique_id=1801478168]
 anchors_preset = 5
