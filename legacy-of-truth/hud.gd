@@ -10,4 +10,5 @@ func _ready() -> void:
 
 func update_score(score):
 	score_lab.text = str(score)
+	print(score)
 	
