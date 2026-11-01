@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://w0f4dhtbpglf"]
+
+[ext_resource type="Texture2D" uid="uid://bvq18fn225hkh" path="res://enemy/enemy_spritesheet.png" id="1_vcbwb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttmjs"]
+atlas = ExtResource("1_vcbwb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fymh"]
+atlas = ExtResource("1_vcbwb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6ojt"]
+atlas = ExtResource("1_vcbwb")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x3q3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttmjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fymh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6ojt")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 2.0
+}]
+
+[node name="LittleMonster" type="Node2D" unique_id=356393067]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2041966193]
+sprite_frames = SubResource("SpriteFrames_x3q3p")
+animation = &"normal"
+autoplay = "normal"
+frame = 1
+frame_progress = 0.68995005
