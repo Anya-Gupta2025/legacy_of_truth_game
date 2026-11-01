@@ -21,10 +21,10 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 	#Flip the animation
-		if direction > 0:
-			sprite.flip_h = false
-		else:
+		if direction < 0:
 			sprite.flip_h = true
+		else:
+			sprite.flip_h = false
 		
 		#Play run animation
 		sprite.play("idle_right")
@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 #Play idle animation
-		sprite.play("idle_left")
+		sprite.play("idle")
 	
 	move_and_slide()
 		

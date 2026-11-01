@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://csskhew28eroj" path="res://scene/player.gd" id="1_xo3ru"]
 [ext_resource type="Texture2D" uid="uid://blbyr631ap0wp" path="res://scene/players.png" id="2_hjaqi"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml7e8"]
+atlas = ExtResource("2_hjaqi")
+region = Rect2(0, 64, 27, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihjo1"]
+atlas = ExtResource("2_hjaqi")
+region = Rect2(27, 64, 27, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hjaqi"]
 atlas = ExtResource("2_hjaqi")
 region = Rect2(0, 0, 27, 32)
@@ -39,6 +47,17 @@ region = Rect2(81, 32, 27, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ml7e8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihjo1")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_hjaqi")
 }, {
 "duration": 1.0,
@@ -52,7 +71,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle_left",
-"speed": 10.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -69,7 +88,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle_right",
-"speed": 10.0
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3owqy"]
@@ -82,8 +101,9 @@ script = ExtResource("1_xo3ru")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=38698119]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_3owqy")
-animation = &"idle_left"
+animation = &"idle_right"
 autoplay = "idle_right"
+frame_progress = 0.6252943
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740917695]
 position = Vector2(0, -10.000001)
