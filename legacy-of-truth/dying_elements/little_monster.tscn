@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://w0f4dhtbpglf"]
 
 [ext_resource type="Texture2D" uid="uid://bvq18fn225hkh" path="res://dying_elements/enemy_spritesheet.png" id="1_vcbwb"]
+[ext_resource type="Script" uid="uid://crq1v1y74nqku" path="res://dying_elements/little_monster.gd" id="1_wt8kb"]
 [ext_resource type="PackedScene" uid="uid://c2ns2aeygtyhc" path="res://dying_elements/kill_zone.tscn" id="2_7s4o1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttmjs"]
@@ -36,6 +37,7 @@ animations = [{
 size = Vector2(32, 65)
 
 [node name="LittleMonster" type="Node2D" unique_id=356393067]
+script = ExtResource("1_wt8kb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2041966193]
 position = Vector2(0, -33)
@@ -50,3 +52,11 @@ position = Vector2(0, -33)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=523084984]
 position = Vector2(-3, 1)
 shape = SubResource("RectangleShape2D_sublu")
+
+[node name="ray_cast_right" type="RayCast2D" parent="." unique_id=159139988]
+position = Vector2(0, -33)
+target_position = Vector2(20, 0)
+
+[node name="ray_cast_left" type="RayCast2D" parent="." unique_id=967570485]
+position = Vector2(0, -33)
+target_position = Vector2(-26, 0)
