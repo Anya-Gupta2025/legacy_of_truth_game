@@ -117,6 +117,9 @@ texture = ExtResource("2_851cf")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_851cf")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sublu"]
+size = Vector2(111.48909, 30.653503)
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sublu"]
 distance = -465.0
 
@@ -170,10 +173,22 @@ limit_top = 0
 limit_right = 1150
 limit_bottom = 650
 
+[node name="LittleMonster2" parent="." unique_id=356393067 instance=ExtResource("10_npec2")]
+visible = false
+position = Vector2(988, 592)
+scale = Vector2(95.206245, -0.94382817)
+
 [node name="KillZone" parent="." unique_id=2142876844 instance=ExtResource("6_n38pt")]
 position = Vector2(175, 182)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KillZone" unique_id=1298374399]
+visible = false
+position = Vector2(398, 447.5)
+scale = Vector2(10.279032, 1.0113053)
+shape = SubResource("RectangleShape2D_sublu")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1741297214]
+visible = false
 position = Vector2(355.99997, -24)
 scale = Vector2(10.279032, 1.0113053)
 shape = SubResource("WorldBoundaryShape2D_sublu")
@@ -209,7 +224,7 @@ offset_bottom = 33.0
 scale = Vector2(0.9926447, 0.987104)
 texture_hover = ExtResource("5_jje72")
 
-[node name="LittleMonster" parent="." unique_id=356393067 instance=ExtResource("10_npec2")]
+[node name="LittleMonster" parent="." unique_id=1827302962 instance=ExtResource("10_npec2")]
 position = Vector2(837, 284)
 scale = Vector2(0.54880637, 0.54880637)
 

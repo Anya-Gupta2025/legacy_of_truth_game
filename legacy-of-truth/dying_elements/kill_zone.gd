@@ -62,5 +62,8 @@ func _on_timer_timeout() -> void:
 		
 		# Reset the dead player to null
 		dead_player = null
+		
+		is_dead = false
+		print("Player isn't dead.")
 	
 	# get_tree().reload_current_scene() # Only if I want to reset scene rather than keep the coin tally too
