@@ -167,7 +167,7 @@ limit_right = 1150
 limit_bottom = 650
 
 [node name="Timer2" type="Timer" parent="Player" unique_id=1087488449]
-wait_time = 0.5
+one_shot = true
 
 [node name="Coin5" parent="." unique_id=310476534 instance=ExtResource("4_6c0qg")]
 position = Vector2(365, 189)
