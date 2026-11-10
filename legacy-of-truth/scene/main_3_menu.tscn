@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bx4r3g0luv50m"]
+
+[ext_resource type="Script" uid="uid://bhbqgwyjn23e0" path="res://scene/main_3_menu.gd" id="1_c7hbp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfuvt"]
+content_margin_top = 6.0
+bg_color = Color(0.7308008, 0.56954736, 0.35445815, 0.90588236)
+border_width_left = 2
+border_width_top = 3
+border_width_right = 2
+border_width_bottom = 3
+border_color = Color(0.96862745, 0.7647059, 0.39215687, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7hbp"]
+bg_color = Color(0.80553764, 0.5343333, 0.22179407, 0.93333334)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.96947974, 0.76414245, 0.39376605, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqnvi"]
+bg_color = Color(0.7529412, 0.56078434, 0.30980393, 0.93333334)
+border_width_left = 2
+border_width_top = 3
+border_width_right = 2
+border_width_bottom = 3
+border_color = Color(0.96862745, 0.7647059, 0.39215687, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Main 3 menu" type="CanvasLayer" unique_id=967833203]
+script = ExtResource("1_c7hbp")
+
+[node name="Hamburger Btn" type="Button" parent="." unique_id=967318624]
+custom_minimum_size = Vector2(400, 80)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -450.0
+offset_bottom = 120.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.10980392, 0.10980392, 0.10980392, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 75
+text = "☰"
+flat = true
+
+[node name="MenuOverlay2" type="Panel" parent="." unique_id=1733953847]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuOverlay2" unique_id=34971826]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -76.5
+offset_right = 200.0
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Start" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1876603472]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c7hbp")
+text = "Start "
+
+[node name="Pause" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1324267653]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqnvi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+text = "Pause "
+
+[node name="Quit" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1126359908]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+text = "Quit"
+
+[connection signal="pressed" from="Hamburger Btn" to="." method="_on_hamburger"]
+[connection signal="pressed" from="MenuOverlay2/VBoxContainer/Start" to="." method="_on_start"]
+[connection signal="pressed" from="MenuOverlay2/VBoxContainer/Pause" to="." method="_on_pause"]
+[connection signal="pressed" from="MenuOverlay2/VBoxContainer/Quit" to="." method="_on_quit"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="1_5kiuu"]
 [ext_resource type="PackedScene" uid="uid://cdvxx0yson4qf" path="res://the_tomb_level_one/level_one_the_tomb.tscn" id="2_dbls1"]
+[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="3_33cqm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3owqy"]
 
@@ -17,3 +18,5 @@ position = Vector2(50, -56)
 shape = SubResource("WorldBoundaryShape2D_3owqy")
 
 [node name="LevelOneTheTomb" parent="." unique_id=800105452 instance=ExtResource("2_dbls1")]
+
+[node name="Main 3 menu" parent="." unique_id=967833203 instance=ExtResource("3_33cqm")]
