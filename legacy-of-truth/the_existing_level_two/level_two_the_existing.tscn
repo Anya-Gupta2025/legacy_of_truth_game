@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cdxub7dvcxbnu"]
 
 [ext_resource type="Texture2D" uid="uid://dgbqxj1x1u1yv" path="res://the_existing_level_two/the_existing_bg.png" id="1_5y2cl"]
-[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_o86ot"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://general_things/player.tscn" id="2_o86ot"]
 [ext_resource type="Texture2D" uid="uid://ykoa4qppmu0k" path="res://the_tomb_level_one/the_tomb_tilemap (1).png" id="3_yrfs7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exgxr"]
