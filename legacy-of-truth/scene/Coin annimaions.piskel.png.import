@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mq56awo5ecdh"
-path="res://.godot/imported/sword_sprites.png-130c8e5e29200451e9d1201c243eedb5.ctex"
+uid="uid://c0g8fo2euw2ct"
+path="res://.godot/imported/Coin annimaions.piskel.png-a0bed5cbcff8e0f60049cbc638fc68b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://general_things/sword_sprites.png"
-dest_files=["res://.godot/imported/sword_sprites.png-130c8e5e29200451e9d1201c243eedb5.ctex"]
+source_file="res://scene/Coin annimaions.piskel.png"
+dest_files=["res://.godot/imported/Coin annimaions.piskel.png-a0bed5cbcff8e0f60049cbc638fc68b9.ctex"]
 
 [params]
 

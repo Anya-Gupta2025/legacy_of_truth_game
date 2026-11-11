@@ -76,6 +76,6 @@ theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_tsr88")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_twtta")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mlvov")
-text = "Continue"
+text = "Continue!"
 
 [connection signal="pressed" from="Panel/continue_button" to="." method="_on_continue_button_pressed"]

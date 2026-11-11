@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0g8fo2euw2ct"
-path="res://.godot/imported/Coin annimaions.piskel.png-e4c5834dc2d0f7e5c0c1d09d6dd611eb.ctex"
+uid="uid://blbyr631ap0wp"
+path="res://.godot/imported/players.png-8d1d4b068d44578fd68508556bb00c97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://general_things/Coin annimaions.piskel.png"
-dest_files=["res://.godot/imported/Coin annimaions.piskel.png-e4c5834dc2d0f7e5c0c1d09d6dd611eb.ctex"]
+source_file="res://scene/players.png"
+dest_files=["res://.godot/imported/players.png-8d1d4b068d44578fd68508556bb00c97.ctex"]
 
 [params]
 

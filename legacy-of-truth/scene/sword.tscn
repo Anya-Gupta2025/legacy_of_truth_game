@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d21y2m61gud6t"]
 
-[ext_resource type="Texture2D" uid="uid://mq56awo5ecdh" path="res://general_things/sword_sprites.png" id="1_yw2l5"]
+[ext_resource type="Script" uid="uid://dmxyrx4xsfgdk" path="res://scene/sword.gd" id="1_bk6pr"]
+[ext_resource type="Texture2D" uid="uid://mq56awo5ecdh" path="res://scene/sword_sprites.png" id="1_yw2l5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uff4u"]
 atlas = ExtResource("1_yw2l5")
@@ -24,15 +25,24 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_51phb"]
-radius = 3.1622777
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry8uw"]
+size = Vector2(20, 105)
 
 [node name="Sword" type="Area2D" unique_id=1657449941]
+collision_mask = 2
+script = ExtResource("1_bk6pr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1848819906]
 sprite_frames = SubResource("SpriteFrames_spev6")
 autoplay = "default"
-frame_progress = 0.08443108
+frame_progress = 0.65657765
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200451273]
-shape = SubResource("CircleShape2D_51phb")
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_ry8uw")
+
+[node name="Timer" type="Timer" parent="." unique_id=1901794469]
+wait_time = 0.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

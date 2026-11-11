@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4was25jmfp5u"]
 
-[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://general_things/player.tscn" id="1_5kiuu"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="1_5kiuu"]
 [ext_resource type="PackedScene" uid="uid://cdvxx0yson4qf" path="res://the_tomb_level_one/level_one_the_tomb.tscn" id="2_dbls1"]
-[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://general_things/main_3_menu.tscn" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="3_33cqm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3owqy"]
 
