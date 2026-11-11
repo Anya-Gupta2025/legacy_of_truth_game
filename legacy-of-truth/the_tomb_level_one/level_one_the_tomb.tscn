@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cwej2yqgednei" path="res://the_tomb_puzzle/images/Portal.png" id="4_e01xr"]
 [ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="5_e01xr"]
 [ext_resource type="Texture2D" uid="uid://c7icr4vecpdlb" path="res://the_tomb_puzzle/images/Portal-3.png.png" id="5_jje72"]
-[ext_resource type="PackedScene" uid="uid://c2ns2aeygtyhc" path="res://dying_elements/kill_zone.tscn" id="6_n38pt"]
 [ext_resource type="PackedScene" uid="uid://w0f4dhtbpglf" path="res://dying_elements/little_monster.tscn" id="10_npec2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5dr"]
@@ -118,9 +117,6 @@ texture = ExtResource("2_851cf")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_851cf")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sublu"]
-distance = -465.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_n376a"]
 atlas = ExtResource("4_e01xr")
 region = Rect2(0, 0, 64, 64)
@@ -174,11 +170,8 @@ limit_top = 0
 limit_right = 1150
 limit_bottom = 650
 
-[node name="KillZone" parent="." unique_id=2142876844 instance=ExtResource("6_n38pt")]
-position = Vector2(175, 182)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1741297214]
-shape = SubResource("WorldBoundaryShape2D_sublu")
+[node name="Timer2" type="Timer" parent="Player" unique_id=1087488449]
+one_shot = true
 
 [node name="Coin5" parent="." unique_id=310476534 instance=ExtResource("4_6c0qg")]
 position = Vector2(365, 189)
@@ -211,8 +204,9 @@ offset_bottom = 33.0
 scale = Vector2(0.9926447, 0.987104)
 texture_hover = ExtResource("5_jje72")
 
-[node name="LittleMonster" parent="." unique_id=356393067 instance=ExtResource("10_npec2")]
+[node name="LittleMonster" parent="." unique_id=1827302962 instance=ExtResource("10_npec2")]
 position = Vector2(837, 284)
 scale = Vector2(0.54880637, 0.54880637)
 
+[connection signal="timeout" from="Player/Timer2" to="Player" method="_on_timer_2_timeout"]
 [connection signal="pressed" from="puzzle_portal_animation/puzzle_portal" to="." method="_on_puzzle_portal_pressed"]
