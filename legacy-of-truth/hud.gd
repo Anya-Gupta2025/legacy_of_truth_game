@@ -1,14 +1,16 @@
 extends Control
 
+@onready var sword_label: Label = $sword_texture/sword_label
+@onready var score_lab: Label = $CoinTexture/ScoreLab
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	EventBus.score_updated.connect(update_score)
 	EventBus.sword_updated.connect(update_sword)
 	
-@onready var sword_label: Label = $sword_texture/sword_label
-@onready var score_lab: Label = $CoinTexture/ScoreLab
-
+	update_score(GameManager.score)
+	update_sword(GameManager.sword_pieces)
+	
 func update_score(score):
 	score_lab.text = str(score)
 	print(score)

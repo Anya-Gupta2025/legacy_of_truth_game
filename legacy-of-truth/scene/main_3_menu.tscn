@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bx4r3g0luv50m"]
 
 [ext_resource type="Script" uid="uid://bhbqgwyjn23e0" path="res://scene/main_3_menu.gd" id="1_c7hbp"]
+[ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_gqnvi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfuvt"]
 content_margin_top = 6.0
@@ -39,6 +40,9 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ct4b0"]
+bg_color = Color(0, 0, 0, 0.83137256)
+
 [node name="Main 3 menu" type="CanvasLayer" unique_id=967833203]
 script = ExtResource("1_c7hbp")
 
@@ -47,8 +51,10 @@ custom_minimum_size = Vector2(400, 80)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -450.0
-offset_bottom = 120.0
+offset_left = -293.0
+offset_top = -1.0
+offset_right = 107.0
+offset_bottom = 110.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -88,32 +94,120 @@ theme_override_constants/separation = 25
 [node name="Start" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1876603472]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
 theme_override_styles/focus = SubResource("StyleBoxFlat_c7hbp")
-text = "Start "
+text = "Start"
 
 [node name="Pause" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1324267653]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxFlat_gqnvi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
-text = "Pause "
+text = "Pause"
 
 [node name="Quit" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=1126359908]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
 theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
 text = "Quit"
 
+[node name="Menu" type="Button" parent="MenuOverlay2/VBoxContainer" unique_id=2095365458]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+text = "Menu"
+
+[node name="MenuOverlay3" type="Panel" parent="." unique_id=702084329]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ct4b0")
+
+[node name="Label" type="Label" parent="MenuOverlay3" unique_id=466193515]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -444.0
+offset_top = -199.0
+offset_right = 444.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 17
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 24
+text = "Going to main menu will make you lose
+all progress. 
+
+Would you like to 
+continue?"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuOverlay3" unique_id=637092998]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Yes" type="Button" parent="MenuOverlay3/VBoxContainer" unique_id=143876258]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c7hbp")
+text = "Yes"
+
+[node name="No" type="Button" parent="MenuOverlay3/VBoxContainer" unique_id=510964505]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gqnvi")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_gqnvi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfuvt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7hbp")
+text = "No"
+
 [connection signal="pressed" from="Hamburger Btn" to="." method="_on_hamburger"]
 [connection signal="pressed" from="MenuOverlay2/VBoxContainer/Start" to="." method="_on_start"]
 [connection signal="pressed" from="MenuOverlay2/VBoxContainer/Pause" to="." method="_on_pause"]
 [connection signal="pressed" from="MenuOverlay2/VBoxContainer/Quit" to="." method="_on_quit"]
+[connection signal="pressed" from="MenuOverlay2/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="MenuOverlay3/VBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="MenuOverlay3/VBoxContainer/No" to="." method="_on_no_pressed"]

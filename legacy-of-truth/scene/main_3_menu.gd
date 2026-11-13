@@ -3,11 +3,13 @@ extends CanvasLayer
 # References to our nodes
 @onready var hamburger_btn = $"Hamburger Btn"
 @onready var menu_over = $MenuOverlay2
+@onready var menu_over_2 = $MenuOverlay3
 
 func _ready():
 	# Start with ONLY the 3 lines visible in the center
 	hamburger_btn.visible = true
 	menu_over.visible = false
+	menu_over_2.visible = false
 
 # --- BUTTON ACTIONS ---
 
@@ -34,3 +36,13 @@ func _on_pause():
 # This handles closing down the game safely
 func _on_quit():
 	get_tree().quit()
+
+func _on_menu_pressed() -> void:
+	menu_over_2.visible = true
+
+func _on_yes_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+
+
+func _on_no_pressed() -> void:
+	menu_over_2.visible = false
