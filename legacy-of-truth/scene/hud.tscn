@@ -3,10 +3,34 @@
 [ext_resource type="Script" uid="uid://qs45t7xf8cka" path="res://hud.gd" id="1_pvgpj"]
 [ext_resource type="Texture2D" uid="uid://c0g8fo2euw2ct" path="res://scene/Coin annimaions.piskel.png" id="2_nhyt6"]
 [ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="3_ry2h7"]
+[ext_resource type="Texture2D" uid="uid://mq56awo5ecdh" path="res://scene/sword_sprites.png" id="4_gvqa0"]
+[ext_resource type="Script" uid="uid://cm67klq02rnay" path="res://scene/sword_texture.gd" id="5_mb73x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3owqy"]
 atlas = ExtResource("2_nhyt6")
 region = Rect2(6.5, 4.833, 18, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb73x"]
+atlas = ExtResource("4_gvqa0")
+region = Rect2(0, 0, 120, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et2b2"]
+atlas = ExtResource("4_gvqa0")
+region = Rect2(0, 119, 120, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvqa0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb73x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et2b2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="HUD" type="Control" unique_id=75497616]
 layout_mode = 3
@@ -32,7 +56,31 @@ offset_right = 122.0
 offset_bottom = 103.0
 theme_override_colors/font_color = Color(0.011764706, 0.011764706, 0.011764706, 1)
 theme_override_fonts/font = ExtResource("3_ry2h7")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 23
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="sword_texture" type="AnimatedSprite2D" parent="." unique_id=2032645658]
+position = Vector2(57, 153)
+rotation = 0.6065546
+sprite_frames = SubResource("SpriteFrames_gvqa0")
+frame_progress = 0.36434332
+script = ExtResource("5_mb73x")
+
+[node name="sword_label" type="Label" parent="sword_texture" unique_id=2053971073]
+offset_left = 36.788086
+offset_top = -20.655212
+offset_right = 252.78809
+offset_bottom = 3.3447876
+rotation = -0.60425293
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.91764706, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0.5454879, 0.359537, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 13
+theme_override_fonts/font = ExtResource("3_ry2h7")
+theme_override_font_sizes/font_size = 24
+text = "= 1 Piece"

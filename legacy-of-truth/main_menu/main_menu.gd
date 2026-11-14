@@ -12,12 +12,15 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_game_button_pressed() -> void:
+	GameManager.reset_game()
 	get_tree().change_scene_to_file("res://the_tomb_level_one/level_one_the_tomb.tscn")
-	print("Switching to main scene")
+	print("Switching to level 1")
 
 
 func _on_how_to_play_button_pressed() -> void:
-	pass # Replace with function body.
+	GameManager.reset_game()
+	get_tree().change_scene_to_file("res://how_to_play/how_to_play.tscn")
+	print("Switching to how to play screen")
 
 
 func _on_credits_button_pressed() -> void:
