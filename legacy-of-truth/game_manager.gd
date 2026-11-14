@@ -15,7 +15,7 @@ func increase_sword():
 	
 func reset_game():
 	score = 0
-	sword_pieces = 0
+	sword_pieces = 1
 	
 	EventBus.score_updated.emit(score)
 	EventBus.sword_updated.emit(sword_pieces)

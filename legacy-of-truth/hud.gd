@@ -16,6 +16,6 @@ func update_score(score):
 	print(score)
 	
 func update_sword(sword_pieces):
-	sword_label.text = str(" = ", sword_pieces, " Pieces")
+	sword_label.text = str(" = ", sword_pieces)
 	print(sword_pieces)
 	
