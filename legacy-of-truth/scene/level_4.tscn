@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 [gd_scene format=4 uid="uid://d30dky5kg2pqg"]
 
 [ext_resource type="Texture2D" uid="uid://bfw66rqmbgrnu" path="res://scene/level 4 background.png" id="1_ynmwb"]
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_5ts23"]
 [ext_resource type="Texture2D" uid="uid://bsbtp7ugqr6yk" path="res://scene/New Finished piskel tiles.piskel.png" id="3_1jt6r"]
+=======
+[gd_scene format=4 uid="uid://6xmbwiwmactk"]
+
+[ext_resource type="Texture2D" path="res://scene/level 4 background.png" id="1_ynmwb"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_5ts23"]
+[ext_resource type="Texture2D" path="res://scene/New Finished piskel tiles.piskel.png" id="3_1jt6r"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3hgo"]
 texture = ExtResource("3_1jt6r")
