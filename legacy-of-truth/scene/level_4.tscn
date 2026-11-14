@@ -1,0 +1,49 @@
+[gd_scene format=4 uid="uid://d30dky5kg2pqg"]
+
+[ext_resource type="Texture2D" uid="uid://bfw66rqmbgrnu" path="res://scene/level 4 background.png" id="1_ynmwb"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_5ts23"]
+[ext_resource type="Texture2D" uid="uid://bsbtp7ugqr6yk" path="res://scene/New Finished piskel tiles.piskel.png" id="3_1jt6r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3hgo"]
+texture = ExtResource("3_1jt6r")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_3owqy"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_b3hgo")
+
+[node name="Level 4" type="Node2D" unique_id=2027478899]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1376476445]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2006588045]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ynmwb")
+expand_mode = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2057819975]
+tile_map_data = PackedByteArray("AAAPAAwAAAABAAAAAAAQAAwAAAABAAAAAAARAAwAAAABAAAAAAAPAA0AAAAAAAAAAAAQAA0AAAAAAAAAAAARAA0AAAAAAAAAAAAXAAsAAAABAAAAAAAYAAsAAAABAAAAAAAaAAsAAAABAAAAAAAZAAsAAAABAAAAAAAXAAwAAAAAAAAAAAAZAAwAAAAAAAAAAAAaAAwAAAAAAAAAAAAYAAwAAAAAAAAAAAAXAA0AAAAAAAAAAAAYAA0AAAAAAAAAAAAZAA0AAAAAAAAAAAAaAA0AAAAAAAAAAAAeAA4AAAABAAAAAAAfAA4AAAABAAAAAAAhAA4AAAABAAAAAAAgAA4AAAABAAAAAAAeAA8AAAAAAAAAAAAfAA8AAAAAAAAAAAAgAA8AAAAAAAAAAAAhAA8AAAAAAAAAAAAdAAkAAAABAAAAAAAeAAkAAAABAAAAAAAfAAkAAAABAAAAAAAgAAkAAAABAAAAAAAeAAoAAAAAAAAAAAAdAAoAAAAAAAAAAAAfAAoAAAAAAAAAAAAgAAoAAAAAAAAAAAAUABAAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAGAAkAAAABAAAAAAAHAAkAAAABAAAAAAAIAAkAAAABAAAAAAAKAAYAAAABAAAAAAALAAYAAAABAAAAAAAMAAYAAAABAAAAAAAMAAcAAAABAAAAAAANAAcAAAABAAAAAAAOAAcAAAABAAAAAAAQAAUAAAABAAAAAAARAAUAAAABAAAAAAASAAUAAAABAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAATAAgAAAABAAAAAAAUAAgAAAABAAAAAAAVAAgAAAABAAAAAAAVAAQAAAABAAAAAAAWAAQAAAABAAAAAAAYAAYAAAABAAAAAAAZAAYAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_3owqy")
+
+[node name="Player" parent="." unique_id=26407888 instance=ExtResource("2_5ts23")]
+position = Vector2(79, 223)
+up_direction = Vector2(2.2222222e-05, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1414265505]
+zoom = Vector2(2.5, 2.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1152
+limit_bottom = 648
