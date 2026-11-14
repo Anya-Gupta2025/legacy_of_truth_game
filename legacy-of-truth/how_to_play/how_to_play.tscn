@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="4_whfj3"]
 [ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="5_rbiqy"]
 [ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="5_vukd5"]
+[ext_resource type="PackedScene" uid="uid://w0f4dhtbpglf" path="res://dying_elements/little_monster.tscn" id="6_rbiqy"]
+[ext_resource type="PackedScene" uid="uid://bnscin5m72c85" path="res://scene/coin.tscn" id="6_whfj3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ad62"]
 texture = ExtResource("1_e746e")
@@ -317,12 +319,11 @@ text = "Falling down means
 dying and respawning."
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Label2" unique_id=1350869814]
-layout_mode = 0
-offset_left = 320.0
-offset_top = 164.0
-offset_right = 584.0
-offset_bottom = 213.0
+[node name="Label3" type="Label" parent="." unique_id=1350869814]
+offset_left = 671.0
+offset_top = 281.0
+offset_right = 935.0
+offset_bottom = 330.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
@@ -333,6 +334,103 @@ theme_override_font_sizes/font_size = 7
 text = "Don't touch the cloaked ghost.
 He is a pet of the Dark Lord"
 horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=273810185]
+offset_left = 668.0
+offset_top = 95.0
+offset_right = 932.0
+offset_bottom = 144.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("5_vukd5")
+theme_override_font_sizes/font_size = 7
+text = "Collect coins to increase score!
+At the end, your score 
+will pay off..."
+horizontal_alignment = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1765196714]
+position = Vector2(263, 203)
+tile_map_data = PackedByteArray("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")
+tile_set = SubResource("TileSet_ayfl8")
+
+[node name="LittleMonster" parent="." unique_id=356393067 instance=ExtResource("6_rbiqy")]
+position = Vector2(769, 351)
+scale = Vector2(0.54880637, 0.54880637)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=318073936]
+
+[node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_whfj3")]
+visible = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_rbiqy")]
+process_mode = 3
+visible = false
+
+[node name="Game Manager" type="Node" parent="." unique_id=370662931]
+
+[node name="Coins" type="Node2D" parent="." unique_id=1423821314]
+
+[node name="Coin" parent="Coins" unique_id=169057689 instance=ExtResource("6_whfj3")]
+position = Vector2(624, 189)
+
+[node name="Coin2" parent="Coins" unique_id=1547214126 instance=ExtResource("6_whfj3")]
+position = Vector2(669, 189)
+
+[node name="Coin3" parent="Coins" unique_id=103362739 instance=ExtResource("6_whfj3")]
+position = Vector2(785, 191)
+
+[node name="Coin4" parent="Coins" unique_id=516516192 instance=ExtResource("6_whfj3")]
+position = Vector2(828, 191)
+
+[node name="Coin5" parent="Coins" unique_id=2009858461 instance=ExtResource("6_whfj3")]
+position = Vector2(919, 160)
+
+[node name="Coin6" parent="Coins" unique_id=369757042 instance=ExtResource("6_whfj3")]
+position = Vector2(1002, 113)
+
+[node name="Coin7" parent="Coins" unique_id=2118016208 instance=ExtResource("6_whfj3")]
+position = Vector2(1028, 113)
+
+[node name="Coin8" parent="Coins" unique_id=485579594 instance=ExtResource("6_whfj3")]
+position = Vector2(1091, 177)
+
+[node name="Coin9" parent="Coins" unique_id=1393304766 instance=ExtResource("6_whfj3")]
+position = Vector2(1069, 177)
+
+[node name="Coin10" parent="Coins" unique_id=2033983066 instance=ExtResource("6_whfj3")]
+position = Vector2(1031, 258)
+
+[node name="Coin11" parent="Coins" unique_id=1028378591 instance=ExtResource("6_whfj3")]
+position = Vector2(999, 258)
+
+[node name="Coin12" parent="Coins" unique_id=1968456343 instance=ExtResource("6_whfj3")]
+position = Vector2(949, 336)
+
+[node name="Coin13" parent="Coins" unique_id=1304245827 instance=ExtResource("6_whfj3")]
+position = Vector2(920, 336)
+
+[node name="Coin14" parent="Coins" unique_id=846177360 instance=ExtResource("6_whfj3")]
+position = Vector2(640, 335)
+
+[node name="Coin15" parent="Coins" unique_id=976812453 instance=ExtResource("6_whfj3")]
+position = Vector2(599, 334)
+
+[node name="Coin16" parent="Coins" unique_id=1941267161 instance=ExtResource("6_whfj3")]
+position = Vector2(558, 334)
+
+[node name="Coin17" parent="Coins" unique_id=7363265 instance=ExtResource("6_whfj3")]
+position = Vector2(497, 398)
+
+[node name="Coin18" parent="Coins" unique_id=2021118716 instance=ExtResource("6_whfj3")]
+position = Vector2(458, 397)
+
+[node name="Coin19" parent="Coins" unique_id=1281895935 instance=ExtResource("6_whfj3")]
+position = Vector2(417, 397)
 
 [node name="Player" parent="." unique_id=26407888 instance=ExtResource("2_buusc")]
 position = Vector2(179, 185)
@@ -347,22 +445,5 @@ limit_bottom = 650
 
 [node name="Timer2" type="Timer" parent="Player" unique_id=1394586966]
 one_shot = true
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1765196714]
-position = Vector2(263, 203)
-tile_map_data = PackedByteArray("AAD4/wAAAQACAAAAAAD5/wAAAQADAAAAAAD6/wAAAQADAAAAAAD7/wAAAQADAAAAAAD8/wAAAQADAAAAAAD9/wAAAQAHAAAAAAACAAAAAQAAAAAAAAACAAEAAQABAAQAAAAHAAAAAQACAAAAAAAIAAAAAQAFAAAAAAAJAAAAAQAHAAAAAAAHAAEAAQACAAQAAAAIAAEAAQAGAAQAAAAJAAEAAQAHAAQAAAD4/wEAAQACAAQAAAD5/wEAAQAGAAQAAAD6/wEAAQAGAAQAAAD7/wEAAQAGAAQAAAD8/wEAAQAGAAQAAAD9/wEAAQAHAAQAAAANAAAAAQACAAAAAAAOAAAAAQADAAAAAAAPAAAAAQADAAAAAAAQAAAAAQAHAAAAAAAQAAEAAQAHAAQAAAAPAAEAAQAGAAQAAAAOAAEAAQAGAAQAAAANAAEAAQACAAQAAAAVAAAAAQACAAAAAAAWAAAAAQADAAAAAAAXAAAAAQAEAAAAAAAYAAAAAQAFAAAAAAAZAAAAAQAGAAAAAAAaAAAAAQAHAAAAAAAVAAEAAQACAAQAAAAWAAEAAQADAAQAAAAXAAEAAQAEAAQAAAAYAAEAAQAFAAQAAAAZAAEAAQAGAAQAAAAaAAEAAQAHAAQAAAAfAAAAAQACAAAAAAAfAAEAAQACAAQAAAAgAAAAAQADAAAAAAAgAAEAAQADAAQAAAAhAAAAAQAEAAAAAAAhAAEAAQAEAAQAAAAiAAAAAQAFAAAAAAAiAAEAAQAFAAQAAAAjAAAAAQAGAAAAAAAjAAEAAQAGAAQAAAAkAAAAAQAHAAAAAAAkAAEAAQAHAAQAAAAnAP7/AQACAAAAAAAnAP//AQACAAQAAAAoAP7/AQADAAAAAAAoAP//AQAGAAQAAAApAP7/AQADAAAAAAApAP//AQAGAAQAAAAqAP7/AQAHAAAAAAAqAP//AQAHAAQAAAAtAPv/AQACAAAAAAAtAPz/AQACAAQAAAAuAPv/AQADAAAAAAAuAPz/AQAGAAQAAAAvAPv/AQADAAAAAAAvAPz/AQAGAAQAAAAwAPv/AQAHAAAAAAAwAPz/AQAHAAQAAAAxAP//AQACAAAAAAAxAAAAAQACAAQAAAAyAP//AQADAAAAAAAyAAAAAQAGAAQAAAAzAP//AQADAAAAAAAzAAAAAQAGAAQAAAA0AP//AQAHAAAAAAA0AAAAAQAHAAQAAAAtAAQAAQACAAAAAAAtAAUAAQACAAQAAAAuAAQAAQADAAAAAAAuAAUAAQAGAAQAAAAvAAQAAQADAAAAAAAvAAUAAQAGAAQAAAAwAAQAAQAHAAAAAAAwAAUAAQAHAAQAAAAoAAkAAQACAAAAAAAoAAoAAQACAAQAAAApAAkAAQADAAAAAAApAAoAAQAGAAQAAAAqAAkAAQADAAAAAAAqAAoAAQAGAAQAAAArAAkAAQAHAAAAAAArAAoAAQAHAAQAAAAhAAoAAQAGAAQAAAAiAAkAAQADAAAAAAAiAAoAAQAGAAQAAAAjAAoAAQAHAAQAAAAeAAkAAQACAAIAAAAeAAoAAQACAAQAAAAhAAkAAQADAAAAAAAfAAoAAQAGAAQAAAAgAAoAAQAGAAQAAAAfAAkAAQADAAAAAAAgAAkAAQADAAAAAAAeAAgAAQAAAAAAAAAjAAkAAQAHAAEAAAAjAAgAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_ayfl8")
-
-[node name="UI" type="CanvasLayer" parent="." unique_id=318073936]
-
-[node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_whfj3")]
-visible = false
-metadata/_edit_use_anchors_ = true
-
-[node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_rbiqy")]
-process_mode = 3
-visible = false
-
-[node name="Game Manager" type="Node" parent="." unique_id=370662931]
 
 [connection signal="timeout" from="Player/Timer2" to="Player" method="_on_timer_2_timeout"]
