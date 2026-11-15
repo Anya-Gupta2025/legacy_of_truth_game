@@ -1,22 +1,40 @@
-[gd_scene format=3 uid="uid://c4was25jmfp5u"]
+[gd_scene format=4 uid="uid://c4was25jmfp5u"]
 
 [ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="1_5kiuu"]
-[ext_resource type="PackedScene" uid="uid://cdvxx0yson4qf" path="res://the_tomb_level_one/level_one_the_tomb.tscn" id="2_dbls1"]
-[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="3_33cqm"]
+[ext_resource type="Texture2D" uid="uid://bfw66rqmbgrnu" path="res://scene/level 4 background.png" id="1_33cqm"]
+[ext_resource type="Texture2D" uid="uid://bsbtp7ugqr6yk" path="res://scene/New Finished piskel tiles.piskel.png" id="2_xwcet"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3owqy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jt6r"]
+texture = ExtResource("2_xwcet")
+texture_region_size = Vector2i(31, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -17, 16, -17, 16, 17, -16, 17)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -17, 16, -17, 16, 17, -16, 17)
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 
-[node name="Game" type="Node2D" unique_id=1236510452]
+[sub_resource type="TileSet" id="TileSet_3owqy"]
+tile_size = Vector2i(32, 34)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1jt6r")
+
+[node name="Level 4" type="Node2D" unique_id=235512952]
+
+[node name="Background" type="TextureRect" parent="." unique_id=463385163]
+z_index = -10
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_33cqm")
+metadata/_edit_use_anchors_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1296709709]
+tile_map_data = PackedByteArray("AAAQABIAAAABAAAAAAARABIAAAABAAAAAAASABIAAAABAAAAAAAsABAAAAABAAAAAAAsABEAAAABAAAAAAAsABIAAAABAAAAAAAtAA8AAAABAAAAAAAuAA8AAAABAAAAAAAvAA8AAAABAAAAAAAsAA8AAAABAAAAAAAvABAAAAABAAAAAAAvABEAAAABAAAAAAAuABIAAAABAAAAAAAtABIAAAABAAAAAAAuABEAAAABAAAAAAAvABIAAAABAAAAAAAuABAAAAABAAAAAAAtABEAAAABAAAAAAAtABAAAAABAAAAAAAxABYAAAABAAAAAAAyABYAAAABAAAAAAAzABYAAAABAAAAAAA0ABYAAAABAAAAAAA1ABYAAAABAAAAAAA1ABcAAAABAAAAAAA0ABcAAAABAAAAAAAzABcAAAABAAAAAAAyABcAAAABAAAAAAAxABcAAAABAAAAAAA5ABoAAAABAAAAAAA6ABoAAAABAAAAAAA7ABoAAAABAAAAAAA8ABoAAAABAAAAAAA9ABoAAAABAAAAAAA+ABoAAAABAAAAAAA/ABoAAAABAAAAAABAABoAAAABAAAAAAA/ABsAAAABAAAAAAA+ABsAAAABAAAAAAA9ABsAAAABAAAAAAA8ABsAAAABAAAAAAA7ABsAAAABAAAAAAA6ABsAAAABAAAAAAA5ABsAAAABAAAAAABAABsAAAABAAAAAAACAA4AAAABAAAAAAADAA4AAAABAAAAAAAEAA4AAAABAAAAAAACAA8AAAABAAAAAAADAA8AAAABAAAAAAAEAA8AAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAATAA4AAAABAAAAAAAUAA4AAAABAAAAAAAVAA4AAAABAAAAAAAVAA8AAAABAAAAAAAUAA8AAAABAAAAAAATAA8AAAABAAAAAAAZAA0AAAABAAAAAAAaAA0AAAABAAAAAAAbAA0AAAABAAAAAAAcAA0AAAABAAAAAAAgABEAAAAAAAAAAAAhABEAAAAAAAAAAAAgABAAAAAAAAAAAAAhABAAAAAAAAAAAAAhAA8AAAAAAAAAAAAgAA8AAAAAAAAAAAAgAA4AAAAAAAAAAAAhAA4AAAAAAAAAAAAgAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAgAA0AAAAAAAAAAAAhAAwAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAiABEAAAAAAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAVAAgAAAABAAAAAAAUAAgAAAABAAAAAAAOAAUAAAABAAAAAAAPAAUAAAABAAAAAAAQAAUAAAABAAAAAAAJAAwAAAABAAAAAAAGAAwAAAABAAAAAAAYAAcAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAkAAAAAAAAAAAAZAAkAAAAAAAAAAAAZAAgAAAAAAAAAAAAZAAcAAAAAAAAAAAAdAAkAAAABAAAAAAAeAAkAAAABAAAAAAAfAAkAAAABAAAAAAAfAAgAAAABAAAAAAAeAAgAAAABAAAAAAAdAAgAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_3owqy")
 
 [node name="Player" parent="." unique_id=26407888 instance=ExtResource("1_5kiuu")]
-position = Vector2(49, -63)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1424179180]
-position = Vector2(50, -56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1939051249]
-shape = SubResource("WorldBoundaryShape2D_3owqy")
-
-[node name="LevelOneTheTomb" parent="." unique_id=800105452 instance=ExtResource("2_dbls1")]
-
-[node name="Main 3 menu" parent="." unique_id=967833203 instance=ExtResource("3_33cqm")]
+position = Vector2(83, 475)
+scale = Vector2(2.5, 2.5)

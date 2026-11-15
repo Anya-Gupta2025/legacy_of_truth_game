@@ -1,116 +1,40 @@
-[gd_scene format=3 uid="uid://cicx6muggugcy"]
+[gd_scene format=4 uid="uid://cicx6muggugcy"]
 
-[ext_resource type="Script" uid="uid://csskhew28eroj" path="res://scene/player.gd" id="1_xo3ru"]
-[ext_resource type="Texture2D" uid="uid://blbyr631ap0wp" path="res://scene/players.png" id="2_hjaqi"]
+[ext_resource type="Texture2D" uid="uid://bfw66rqmbgrnu" path="res://scene/level 4 background.png" id="1_fvtld"]
+[ext_resource type="Texture2D" uid="uid://bsbtp7ugqr6yk" path="res://scene/New Finished piskel tiles.piskel.png" id="2_ct4mp"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="3_s4jxa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ml7e8"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(0, 64, 27, 32)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jt6r"]
+texture = ExtResource("2_ct4mp")
+texture_region_size = Vector2i(31, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -17, 16, -17, 16, 17, -16, 17)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -17, 16, -17, 16, 17, -16, 17)
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ihjo1"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(27, 64, 27, 32)
+[sub_resource type="TileSet" id="TileSet_3owqy"]
+tile_size = Vector2i(32, 34)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1jt6r")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hjaqi"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(0, 0, 27, 32)
+[node name="Level 4" type="Node2D" unique_id=235512952]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hp4bs"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(27, 0, 27, 32)
+[node name="Background" type="TextureRect" parent="." unique_id=463385163]
+z_index = -10
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_fvtld")
+metadata/_edit_use_anchors_ = true
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2vtq"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(54, 0, 27, 32)
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1296709709]
+tile_map_data = PackedByteArray("AAAQABIAAAABAAAAAAARABIAAAABAAAAAAASABIAAAABAAAAAAAsABAAAAABAAAAAAAsABEAAAABAAAAAAAsABIAAAABAAAAAAAtAA8AAAABAAAAAAAuAA8AAAABAAAAAAAvAA8AAAABAAAAAAAsAA8AAAABAAAAAAAvABAAAAABAAAAAAAvABEAAAABAAAAAAAuABIAAAABAAAAAAAtABIAAAABAAAAAAAuABEAAAABAAAAAAAvABIAAAABAAAAAAAuABAAAAABAAAAAAAtABEAAAABAAAAAAAtABAAAAABAAAAAAAxABYAAAABAAAAAAAyABYAAAABAAAAAAAzABYAAAABAAAAAAA0ABYAAAABAAAAAAA1ABYAAAABAAAAAAA1ABcAAAABAAAAAAA0ABcAAAABAAAAAAAzABcAAAABAAAAAAAyABcAAAABAAAAAAAxABcAAAABAAAAAAA5ABoAAAABAAAAAAA6ABoAAAABAAAAAAA7ABoAAAABAAAAAAA8ABoAAAABAAAAAAA9ABoAAAABAAAAAAA+ABoAAAABAAAAAAA/ABoAAAABAAAAAABAABoAAAABAAAAAAA/ABsAAAABAAAAAAA+ABsAAAABAAAAAAA9ABsAAAABAAAAAAA8ABsAAAABAAAAAAA7ABsAAAABAAAAAAA6ABsAAAABAAAAAAA5ABsAAAABAAAAAABAABsAAAABAAAAAAACAA4AAAABAAAAAAADAA4AAAABAAAAAAAEAA4AAAABAAAAAAACAA8AAAABAAAAAAADAA8AAAABAAAAAAAEAA8AAAABAAAAAAAHAAwAAAABAAAAAAAIAAwAAAABAAAAAAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAATAA4AAAABAAAAAAAUAA4AAAABAAAAAAAVAA4AAAABAAAAAAAVAA8AAAABAAAAAAAUAA8AAAABAAAAAAATAA8AAAABAAAAAAAZAA0AAAABAAAAAAAaAA0AAAABAAAAAAAbAA0AAAABAAAAAAAcAA0AAAABAAAAAAAgABEAAAAAAAAAAAAhABEAAAAAAAAAAAAgABAAAAAAAAAAAAAhABAAAAAAAAAAAAAhAA8AAAAAAAAAAAAgAA8AAAAAAAAAAAAgAA4AAAAAAAAAAAAhAA4AAAAAAAAAAAAgAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAgAA0AAAAAAAAAAAAhAAwAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAiABEAAAAAAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAVAAgAAAABAAAAAAAUAAgAAAABAAAAAAAOAAUAAAABAAAAAAAPAAUAAAABAAAAAAAQAAUAAAABAAAAAAAJAAwAAAABAAAAAAAGAAwAAAABAAAAAAAYAAcAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAkAAAAAAAAAAAAZAAkAAAAAAAAAAAAZAAgAAAAAAAAAAAAZAAcAAAAAAAAAAAAdAAkAAAABAAAAAAAeAAkAAAABAAAAAAAfAAkAAAABAAAAAAAfAAgAAAABAAAAAAAeAAgAAAABAAAAAAAdAAgAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_3owqy")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fvbb"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(81, 0, 27, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fvtld"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(0, 32, 27, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ct4mp"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(27, 32, 27, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4jxa"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(54, 32, 27, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oh5ij"]
-atlas = ExtResource("2_hjaqi")
-region = Rect2(81, 32, 27, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3owqy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ml7e8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ihjo1")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hjaqi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp4bs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g2vtq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2fvbb")
-}],
-"loop": 1,
-"name": &"idle_left",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fvtld")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ct4mp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s4jxa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oh5ij")
-}],
-"loop": 1,
-"name": &"idle_right",
-"speed": 7.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3owqy"]
-radius = 0.9081968
-
-[node name="Player" type="CharacterBody2D" unique_id=26407888]
-collision_layer = 2
-script = ExtResource("1_xo3ru")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=38698119]
-position = Vector2(0, -11)
-sprite_frames = SubResource("SpriteFrames_3owqy")
-animation = &"idle_right"
-autoplay = "idle_right"
-frame_progress = 0.6252943
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740917695]
-position = Vector2(0, -10.000001)
-scale = Vector2(1.1010829, 11.016957)
-shape = SubResource("CircleShape2D_3owqy")
-
-[node name="Timer2" type="Timer" parent="." unique_id=979418195]
-one_shot = true
-
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[node name="Player" parent="." unique_id=26407888 instance=ExtResource("3_s4jxa")]
+position = Vector2(83, 475)
+scale = Vector2(2.5, 2.5)
