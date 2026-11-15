@@ -7,7 +7,7 @@ extends CharacterBody2D
 var is_respawning: bool = false
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -400.0
 
 @export var y_limit: float = 600.0
 @export var respawn_point: Vector2 = Vector2(179, 190)

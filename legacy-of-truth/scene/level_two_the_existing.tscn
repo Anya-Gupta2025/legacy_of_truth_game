@@ -162,7 +162,7 @@ limit_top = 0
 limit_right = 1150
 limit_bottom = 650
 
-[node name="Timer2" type="Timer" parent="Player" unique_id=1288907758]
+[node name="Timer3" type="Timer" parent="Player" unique_id=1288907758]
 one_shot = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2028460744]
@@ -171,12 +171,13 @@ tile_map_data = PackedByteArray("AAD4/wAABgACAAAAAAD5/wAABgADAAAAAAD6/wAABgAEAAA
 tile_set = SubResource("TileSet_gw22h")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1919574494]
+visible = false
 
 [node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_yrfs7")]
+visible = false
 
 [node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_exgxr")]
 process_mode = 3
+visible = false
 
 [node name="Game Manager" type="Node" parent="." unique_id=1261084736]
-
-[connection signal="timeout" from="Player/Timer2" to="Player" method="_on_timer_2_timeout"]

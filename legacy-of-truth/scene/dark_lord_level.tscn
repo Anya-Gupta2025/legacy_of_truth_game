@@ -1,0 +1,71 @@
+[gd_scene format=4 uid="uid://dab7jpcbmkor6"]
+
+[ext_resource type="Texture2D" uid="uid://bfw66rqmbgrnu" path="res://scene/level 4 background.png" id="1_owh0o"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_mytjg"]
+[ext_resource type="Texture2D" uid="uid://bsbtp7ugqr6yk" path="res://scene/New Finished piskel tiles.piskel.png" id="3_v2qi8"]
+[ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="4_njkif"]
+[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="5_5a1md"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6aix"]
+texture = ExtResource("1_owh0o")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gbqj1"]
+texture = ExtResource("3_v2qi8")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_gw22h"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_gbqj1")
+
+[node name="LevelTwoTheExisting" type="Node2D" unique_id=484019570]
+
+[node name="Panel" type="Panel" parent="." unique_id=940266615]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o6aix")
+
+[node name="Player" parent="." unique_id=26407888 instance=ExtResource("2_mytjg")]
+position = Vector2(179, 185)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1885003831]
+position = Vector2(-4, -13)
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 650
+
+[node name="Timer3" type="Timer" parent="Player" unique_id=1288907758]
+one_shot = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2028460744]
+position = Vector2(263, 203)
+tile_map_data = PackedByteArray("AAD6////AAACAAAAAAD6/wAAAAACAAEAAAD7////AAADAAAAAAD7/wAAAAADAAEAAAD8////AAACAAAAAAD8/wAAAAACAAEAAAD9////AAADAAAAAAD9/wAAAAADAAEAAAD+////AAACAAAAAAD+/wAAAAACAAEAAAD/////AAADAAAAAAD//wAAAAADAAEAAAADAP//AAACAAAAAAADAAAAAAACAAEAAAAEAP//AAADAAAAAAAEAAAAAAADAAEAAAAFAP//AAACAAAAAAAFAAAAAAACAAEAAAAGAP//AAADAAAAAAAGAAAAAAADAAEAAAAHAP//AAACAAAAAAAHAAAAAAACAAEAAAAIAP//AAADAAAAAAAIAAAAAAADAAEAAAALAP//AAAAAAAAAAALAAAAAAAAAAEAAAAMAP//AAABAAAAAAAMAAAAAAABAAEAAAANAP//AAAAAAAAAAANAAAAAAAAAAEAAAAOAP//AAABAAAAAAAOAAAAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_gw22h")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1919574494]
+visible = false
+
+[node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_njkif")]
+visible = false
+
+[node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_5a1md")]
+process_mode = 3
+visible = false
+
+[node name="Game Manager" type="Node" parent="." unique_id=1261084736]
