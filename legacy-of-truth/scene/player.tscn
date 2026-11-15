@@ -109,3 +109,8 @@ frame_progress = 0.6252943
 position = Vector2(0, -10.000001)
 scale = Vector2(1.1010829, 11.016957)
 shape = SubResource("CircleShape2D_3owqy")
+
+[node name="Timer2" type="Timer" parent="." unique_id=979418195]
+one_shot = true
+
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
