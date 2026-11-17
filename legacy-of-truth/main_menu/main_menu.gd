@@ -24,7 +24,8 @@ func _on_how_to_play_button_pressed() -> void:
 
 
 func _on_credits_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://main_menu/credits.tscn")
+	print("Switching to how to credits screen")
 
 
 func _on_quit_button_pressed() -> void:
