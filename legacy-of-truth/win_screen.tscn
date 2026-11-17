@@ -1,8 +1,38 @@
 [gd_scene format=3 uid="uid://ds2qekiuw813w"]
 
+[ext_resource type="Script" uid="uid://bp08dcmkad1kp" path="res://win_screen.gd" id="1_1txte"]
 [ext_resource type="Texture2D" uid="uid://co0lax44trbpa" path="res://win_screen/win_background.png" id="1_l5t5q"]
 [ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_1txte"]
 [ext_resource type="FontFile" uid="uid://23gcyi5i2if5" path="res://win_screen/MedievalSharp-Regular.ttf" id="3_26557"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26557"]
+bg_color = Color(0.95808893, 0.891297, 0.7481391, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.21952009, 0.18261361, 0.06079729, 0.6)
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luvg0"]
+bg_color = Color(0.78462434, 0.6533989, 0.35722053, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 3
+shadow_color = Color(0.3146209, 0.2381379, 0.10773856, 0.6)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hoe6"]
+bg_color = Color(0.8575603, 0.72716826, 0.4374222, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 3
+shadow_color = Color(0.3146209, 0.2381379, 0.10773856, 0.6)
+shadow_size = 12
 
 [node name="WinScreen" type="Control" unique_id=853738228]
 layout_mode = 3
@@ -11,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1txte")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=372305216]
 texture_filter = 1
@@ -59,3 +90,29 @@ layout_mode = 0
 offset_left = 25.0
 offset_right = 68.0
 offset_bottom = 89.0
+
+[node name="continue_button" type="Button" parent="." unique_id=1911070380]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -610.0
+offset_top = -70.0
+offset_right = -432.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.0093103545, 0.0093103545, 0.0093103545, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1txte")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_luvg0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5hoe6")
+text = "Home"
+
+[connection signal="pressed" from="continue_button" to="." method="_on_continue_button_pressed"]

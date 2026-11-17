@@ -162,7 +162,7 @@ position = Vector2(570.54675, -47.282898)
 scale = Vector2(1.0000005, 1.0000005)
 
 [node name="Dark Lord" parent="." unique_id=1268439128 instance=ExtResource("9_dgtvt")]
-position = Vector2(173, 452.99997)
+position = Vector2(173, 461)
 scale = Vector2(0.3944767, 0.3944767)
 
 [connection signal="timeout" from="Player/Timer2" to="Player" method="_on_timer_2_timeout"]
