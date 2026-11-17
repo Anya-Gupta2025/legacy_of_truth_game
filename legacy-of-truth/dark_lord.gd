@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: float = 100.0
-@export var patrol_distance: float = 150.0 # How far to walk before turning around
-
+@export var patrol_distance: float = 75.0 # How far to walk before turning around
+@onready var timer: Timer = $Timer
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 var start_x: float
@@ -27,3 +27,8 @@ func _physics_process(_delta: float) -> void:
 		anim.play("walk_right")
 	else:
 		anim.play("walk_left")
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+		
+	# Animations
+	get_tree().change_scene_to_file("res://dark_lord_level/dark_lord_level.tscn")
