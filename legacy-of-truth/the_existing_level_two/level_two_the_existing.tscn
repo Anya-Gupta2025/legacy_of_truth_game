@@ -14,7 +14,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exgxr"]
 texture = ExtResource("1_5y2cl")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrfs7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt2fv"]
 texture = ExtResource("3_yrfs7")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -147,7 +147,7 @@ texture = ExtResource("3_yrfs7")
 
 [sub_resource type="TileSet" id="TileSet_gw22h"]
 physics_layer_0/collision_layer = 1
-sources/6 = SubResource("TileSetAtlasSource_yrfs7")
+sources/6 = SubResource("TileSetAtlasSource_wt2fv")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n376a"]
 atlas = ExtResource("8_d0cgh")
@@ -199,14 +199,11 @@ tile_map_data = PackedByteArray("AAD4/wAABgACAAAAAAD5/wAABgADAAAAAAD6/wAABgAEAAA
 tile_set = SubResource("TileSet_gw22h")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1919574494]
-visible = false
 
 [node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_yrfs7")]
-visible = false
 
 [node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_exgxr")]
 process_mode = 3
-visible = false
 
 [node name="Game Manager" type="Node" parent="." unique_id=1261084736]
 
