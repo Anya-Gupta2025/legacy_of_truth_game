@@ -2,6 +2,14 @@ extends Node
 
 var score = 0
 var sword_pieces = 1
+var level_2_start_score = 0
+
+func save_level_2_checkpoint():
+	level_2_start_score = score
+
+func retry_level_2():
+	score = level_2_start_score
+	EventBus.score_updated.emit(score)
 
 func increase_score():
 	score += 1
@@ -16,6 +24,7 @@ func increase_sword():
 func reset_game():
 	score = 0
 	sword_pieces = 1
+	level_2_start_score = 0
 	
 	EventBus.score_updated.emit(score)
 	EventBus.sword_updated.emit(sword_pieces)
