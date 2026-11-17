@@ -183,9 +183,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3owqy"]
+size = Vector2(17, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sublu"]
 size = Vector2(29, 57)
 
 [node name="Dark Lord" type="CharacterBody2D" unique_id=1268439128]
+collision_mask = 2
 script = ExtResource("1_58jd6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2034834341]
@@ -196,7 +200,17 @@ animation = &"idle"
 frame_progress = 0.7847735
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857799149]
-position = Vector2(-0.5, -31.5)
+position = Vector2(-1.5, -29)
 shape = SubResource("RectangleShape2D_3owqy")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1412228081]
+[node name="Timer" type="Timer" parent="." unique_id=547109676]
+wait_time = 0.8
+
+[node name="Area2D" type="Area2D" parent="." unique_id=195031253]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=459790411]
+position = Vector2(-0.5, -31)
+shape = SubResource("RectangleShape2D_sublu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
