@@ -5,7 +5,7 @@ extends Area2D
 
 func _on_body_entered(_body):
 	EventBus.sword_collected.emit()
-	print("Sword 1 collected!")
+	print("Sword 2 collected!")
 	
 	# Animations
 	
@@ -27,4 +27,4 @@ func _on_timer_timeout() -> void:
 	queue_free()
 	
 	# Change to level 2
-	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://dark_lord_level/dark_lord_level.tscn")
