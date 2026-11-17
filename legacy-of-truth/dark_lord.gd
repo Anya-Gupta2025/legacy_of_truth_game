@@ -28,7 +28,9 @@ func _physics_process(_delta: float) -> void:
 	else:
 		anim.play("walk_left")
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-		
-	# Animations
-	get_tree().change_scene_to_file("res://dark_lord_level/dark_lord_level.tscn")
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	
+	get_tree().call_deferred(
+		"change_scene_to_file",
+        "res://dark_lord_level/dark_lord_level.tscn"
+	)
