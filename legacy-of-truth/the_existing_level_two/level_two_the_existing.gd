@@ -13,4 +13,4 @@ func _process(_delta: float) -> void:
 
 func _on_puzzle_portal_pressed() -> void:
 	print("Portal pressed")
-	get_tree().change_scene_to_file("res://the_tomb_puzzle/tomb_puzzle_one.tscn")
+	get_tree().change_scene_to_file("res://the_existing_puzzle/existing_puzzle_one.tscn")
