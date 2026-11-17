@@ -111,8 +111,8 @@ func check_win():
 		lose_label.show()
 		
 func _on_continue_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://the_tomb_puzzle/tomb_puzzle_six.tscn")
+	get_tree().change_scene_to_file("res://the_existing_puzzle/collect_sword_2.tscn")
 
 func _on_lose_button_pressed() -> void:
 	GameManager.reset_game()
-	get_tree().change_scene_to_file("res://the_tomb_level_one/level_one_the_tomb.tscn")
+	get_tree().change_scene_to_file("res://the_existing_level_two/level_two_the_existing.tscn")

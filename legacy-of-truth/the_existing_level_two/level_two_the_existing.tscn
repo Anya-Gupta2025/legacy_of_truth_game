@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://w0f4dhtbpglf" path="res://dying_elements/little_monster.tscn" id="7_gw22h"]
 [ext_resource type="Texture2D" uid="uid://cwej2yqgednei" path="res://the_tomb_puzzle/images/Portal.png" id="8_d0cgh"]
 [ext_resource type="Texture2D" uid="uid://c7icr4vecpdlb" path="res://the_tomb_puzzle/images/Portal-3.png.png" id="9_wt2fv"]
+[ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="11_b46c2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exgxr"]
 texture = ExtResource("1_5y2cl")
@@ -184,7 +185,7 @@ position = Vector2(179, 185)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1885003831]
 position = Vector2(-4, -13)
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
@@ -301,6 +302,37 @@ offset_right = 32.0
 offset_bottom = 33.0
 scale = Vector2(0.9926447, 0.987104)
 texture_hover = ExtResource("9_wt2fv")
+
+[node name="Text" type="Node2D" parent="." unique_id=1772381351]
+position = Vector2(1063, 391)
+
+[node name="Label6" type="Label" parent="Text" unique_id=453065209]
+offset_left = -955.0
+offset_top = -241.0
+offset_right = -675.0
+offset_bottom = -167.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_b46c2")
+theme_override_font_sizes/font_size = 6
+text = "Good Luck."
+
+[node name="Label" type="Label" parent="Text" unique_id=1688441734]
+offset_left = -956.0
+offset_top = -260.0
+offset_right = -692.0
+offset_bottom = -211.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("11_b46c2")
+theme_override_font_sizes/font_size = 10
+text = "Level Two: The Existing"
 
 [connection signal="timeout" from="Player/Timer2" to="Player" method="_on_timer_2_timeout"]
 [connection signal="pressed" from="puzzle_portal_animation/puzzle_portal" to="." method="_on_puzzle_portal_pressed"]
