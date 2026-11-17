@@ -1,16 +1,16 @@
 [gd_scene format=4 uid="uid://cdxub7dvcxbnu"]
 
-[ext_resource type="Texture2D" uid="uid://dgbqxj1x1u1yv" path="res://the_existing_level_two/the_existing_bg.png" id="1_5y2cl"]
-[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_o86ot"]
-[ext_resource type="Texture2D" uid="uid://bqohj5vnvgskr" path="res://the_existing_level_two/level_two_tileset.png" id="3_yrfs7"]
-[ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="4_yrfs7"]
-[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="5_exgxr"]
+[ext_resource type="Texture2D" uid="uid://dgbqxj1x1u1yv" path="res://the_existing_level_two/the_existing_bg.png" id="1_2oyna"]
+[ext_resource type="PackedScene" uid="uid://cicx6muggugcy" path="res://scene/player.tscn" id="2_rm7v7"]
+[ext_resource type="Texture2D" uid="uid://bqohj5vnvgskr" path="res://the_existing_level_two/level_two_tileset.png" id="3_pwtaq"]
+[ext_resource type="PackedScene" uid="uid://v60cdshe6pr" path="res://scene/hud.tscn" id="4_fymfs"]
+[ext_resource type="PackedScene" uid="uid://bx4r3g0luv50m" path="res://scene/main_3_menu.tscn" id="5_8qb6l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exgxr"]
-texture = ExtResource("1_5y2cl")
+texture = ExtResource("1_2oyna")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrfs7"]
-texture = ExtResource("3_yrfs7")
+texture = ExtResource("3_pwtaq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -151,7 +151,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_exgxr")
 
-[node name="Player" parent="." unique_id=26407888 instance=ExtResource("2_o86ot")]
+[node name="Player" parent="." unique_id=26407888 instance=ExtResource("2_rm7v7")]
 position = Vector2(179, 185)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1885003831]
@@ -173,10 +173,10 @@ tile_set = SubResource("TileSet_gw22h")
 [node name="UI" type="CanvasLayer" parent="." unique_id=1919574494]
 visible = false
 
-[node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_yrfs7")]
+[node name="HUD" parent="UI" unique_id=75497616 instance=ExtResource("4_fymfs")]
 visible = false
 
-[node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_exgxr")]
+[node name="Main 3 menu" parent="UI" unique_id=967833203 instance=ExtResource("5_8qb6l")]
 process_mode = 3
 visible = false
 
