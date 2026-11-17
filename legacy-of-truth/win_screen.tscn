@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ds2qekiuw813w"]
+
+[ext_resource type="Texture2D" uid="uid://co0lax44trbpa" path="res://win_screen/win_background.png" id="1_l5t5q"]
+[ext_resource type="FontFile" uid="uid://badgspl4ys7bv" path="res://fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="2_1txte"]
+[ext_resource type="FontFile" uid="uid://23gcyi5i2if5" path="res://win_screen/MedievalSharp-Regular.ttf" id="3_26557"]
+
+[node name="WinScreen" type="Control" unique_id=853738228]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=372305216]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l5t5q")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1019380277]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 103.0
+offset_right = 1115.0
+offset_bottom = 410.0
+theme_override_colors/font_color = Color(0.95686275, 0.7058824, 0.105882354, 1)
+theme_override_colors/font_shadow_color = Color(0.54901963, 0.34509805, 0.06666667, 1)
+theme_override_colors/font_outline_color = Color(0.11764706, 0.09411765, 0.07058824, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/font = ExtResource("2_1txte")
+theme_override_font_sizes/font_size = 51
+text = "LEGACY OF TRUTH"
+
+[node name="Label2" type="Label" parent="." unique_id=494279700]
+custom_minimum_size = Vector2(750, 0)
+layout_mode = 0
+offset_left = 248.0
+offset_top = 195.0
+offset_right = 1033.0
+offset_bottom = 584.0
+theme_override_colors/font_color = Color(0.11764706, 0.09411765, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("3_26557")
+theme_override_font_sizes/font_size = 64
+text = "You rebuilt the Legendary Sword of Truth and defeated the Dark Lord of Lies!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Score Label" type="Label" parent="." unique_id=1017018330]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 68.0
+offset_bottom = 89.0
