@@ -114,5 +114,5 @@ func _on_continue_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://the_existing_puzzle/collect_sword_2.tscn")
 
 func _on_lose_button_pressed() -> void:
-	GameManager.reset_game()
+	GameManager.retry_level_2()
 	get_tree().change_scene_to_file("res://the_existing_level_two/level_two_the_existing.tscn")

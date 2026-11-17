@@ -3,7 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Level 2 loaded") # Replace with function body.
+	print("Level 2 loaded")
+	
+	# Save the score at teh start of level 2
+	GameManager.save_level_2_checkpoint()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
